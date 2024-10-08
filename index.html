@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - LinkedIn Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #f0f2f5, #ffffff);
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sidebar {
+            width: 20%;
+            background: linear-gradient(to bottom, #ffffff, #e6e9ef);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+
+        .shortcut ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .shortcut ul li {
+            margin: 15px 0;
+        }
+
+        .shortcut ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .shortcut ul li a:hover {
+            color: #007bff;
+        }
+
+        .main-content {
+            width: 55%;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .post-box {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .post-box input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .post-box button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .post-box button:hover {
+            background-color: #0056b3;
+        }
+
+        .post {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .user-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .post-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .user-name {
+            font-weight: bold;
+        }
+
+        .post-time {
+            color: #777;
+        }
+
+        .post-body {
+            margin-bottom: 15px;
+        }
+
+        .post-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .post-footer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .post-footer button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #007bff;
+        }
+
+        .post-footer button:hover {
+            color: #0056b3;
+        }
+
+        .comments-section {
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+
+        .comment {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .comment-body {
+            margin-left: 10px;
+            background-color: #f0f2f5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .right-sidebar {
+            width: 20%;
+            background: linear-gradient(to bottom, #ffffff, #e6e9ef);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+
+        .notifications {
+            margin-bottom: 20px;
+        }
+
+        .notifications h3 {
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .notification-item {
+            background-color: #f0f2f5;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="shortcut">
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="jobs.html"><i class="fas fa-briefcase"></i> Jobs</a></li>
+                    <li><a href="my_jobs.html"><i class="fas fa-user"></i> My Jobs</a></li>
+                    <li><a href="profile.html"><i class="fas fa-id-badge"></i> Profile</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content">
+            <div class="post-box">
+                <input type="text" placeholder="write something">
+                <button>Post</button>
+            </div>
+            <div class="post">
+                <div class="post-header">
+                    <img src="user.jpg" alt="User" class="user-img">
+                    <div class="post-info">
+                        <span class="user-name">Janice Griffith</span>
+                        <span class="post-time">Published: June 2, 2018</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <img src="post.jpg" alt="Post Image" class="post-img">
+                    <p>World's most beautiful car in Curabitur <a href="#">#test drive booking</a>! Available in America and Saudi Arabia. Book your test drive now!</p>
+                </div>
+                <div class="post-footer">
+                    <button onclick="likePost()"><i class="fas fa-thumbs-up"></i> 1.3k</button>
+                    <button onclick="addComment()"><i class="fas fa-comment"></i> 52</button>
+                    <button onclick="sharePost()"><i class="fas fa-share"></i> 2.2k</button>
+                </div>
+                <div class="comments-section">
+                    <div class="comment">
+                        <img src="user2.jpg" alt="User" class="user-img">
+                        <div class="comment-body">
+                            <span class="user-name">Jason Borne</span>
+                            <p>We are working for the dance and sing songs. This car is awesome for the youngster, please vote this car and like our post!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="notifications">
+                <h3>Notifications</h3>
+                <div class="notification-item">
+                    You have 3 new likes on your post.
+                </div>
+                <div class="notification-item">
+                    Someone commented on your post.
+                </div>
+                <div class="notification-item">
+                    Update your profile to get more connections.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function likePost() {
+            alert("You liked the post!");
+        }
+
+        function addComment() {
+            let commentText = prompt("Enter your comment:");
+            if (commentText) {
+                let commentsSection = document.querySelector('.comments-section');
+                let newComment = document.createElement('div');
+                newComment.classList.add('comment');
+                newComment.innerHTML = `
+                    <img src="user.jpg" alt="User" class="user-img">
+                    <div class="comment-body">
+                        <span class="user-name">You</span>
+                        <p>${commentText}</p>
+                    </div>
+                `;
+                commentsSection.appendChild(newComment);
+            }
+        }
+
+        function sharePost() {
+            alert("You shared the post!");
+        }
+    </script>
+</body>
+</html>

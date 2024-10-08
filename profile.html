@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - LinkedIn Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e9ecef, #f8f9fa);
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sidebar {
+            width: 20%;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+
+        .shortcut ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .shortcut ul li {
+            margin: 15px 0;
+        }
+
+        .shortcut ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .shortcut ul li a:hover {
+            color: #007bff;
+        }
+
+        .main-content {
+            width: 55%;
+            padding: 20px;
+            margin: 20px auto;
+        }
+
+        .profile-header {
+            background-color: #007bff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .profile-header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .profile-header h2 {
+            margin: 10px 0;
+        }
+
+        .profile-header p {
+            font-size: 18px;
+        }
+
+        .about-section, .posts-section {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .about-section h3, .posts-section h3 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .about-section p {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .post {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .user-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .post-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .user-name {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .post-time {
+            color: #777;
+        }
+
+        .post-body {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .post-footer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .post-footer button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #007bff;
+            font-size: 16px;
+        }
+
+        .post-footer button:hover {
+            color: #0056b3;
+        }
+
+        .right-sidebar {
+            width: 20%;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+
+        .connections {
+            margin-bottom: 20px;
+        }
+
+        .connections h3 {
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+
+        .connection-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .connection-item:hover {
+            background: #f0f2f5;
+        }
+
+        .connection-item img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .connection-item .connection-name {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="sidebar">
+            <div class="shortcut">
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="jobs.html"><i class="fas fa-briefcase"></i> Jobs</a></li>
+                    <li><a href="my_jobs.html"><i class="fas fa-user"></i> My Jobs</a></li>
+                    <li><a href="profile.html"><i class="fas fa-id-badge"></i> Profile</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="profile-header">
+                <img src="eliot ederson.jpg" alt="User">
+                <h2>Moamen Mohammed</h2>
+                <p>Software Developer at Mindset Company</p>
+            </div>
+            <div class="about-section">
+                <h3>About</h3>
+                <p>Passionate software developer with 5 years of experience in building web applications and working with different technologies, including Java, JavaScript, and cloud-based services.</p>
+            </div>
+            <div class="posts-section">
+                <h3>Posts</h3>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="eliot ederson.jpg" alt="User" class="user-img">
+                        <div class="post-info">
+                            <span class="user-name">mohamed osama</span>
+                            <span class="post-time">Published: June 15, 2024</span>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <p>Excited to share my new project with everyone! It's a platform to help developers collaborate effectively.</p>
+                    </div>
+                    <div class="post-footer">
+                        <button onclick="likePost()"><i class="fas fa-thumbs-up"></i> 500</button>
+                        <button onclick="addComment()"><i class="fas fa-comment"></i> 60</button>
+                        <button onclick="sharePost()"><i class="fas fa-share"></i> 120</button>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <img src="eliot ederson.jpg" alt="User" class="user-img">
+                        <div class="post-info">
+                            <span class="user-name">yousef fat7i</span>
+                            <span class="post-time">Shared by you: June 12, 2024</span>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <p>Check out this amazing new tech stack for web development. It has really improved my workflow!</p>
+                    </div>
+                    <div class="post-footer">
+                        <button onclick="likePost()"><i class="fas fa-thumbs-up"></i> 320</button>
+                        <button onclick="addComment()"><i class="fas fa-comment"></i> 45</button>
+                        <button onclick="sharePost()"><i class="fas fa-share"></i> 75</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <div class="connections">
+                <h3>Connections</h3>
+                <div class="connection-item">
+                    <img src="eliot ederson.jpg" alt="User">
+                    <span class="connection-name">Ali mohammed</span>
+                </div>
+                <div class="connection-item">
+                    <img src="eliot ederson.jpg" alt="User">
+                    <span class="connection-name">ahmed adel</span>
+                </div>
+                <div class="connection-item">
+                    <img src="eliot ederson.jpg" alt="User">
+                    <span class="connection-name">mahmoud yasser</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function likePost() {
+            alert("You liked the post!");
+        }
+
+        function addComment() {
+            let commentText = prompt("Enter your comment:");
+            if (commentText) {
+                alert("Your comment has been added!");
+            }
+        }
+
+        function sharePost() {
+            alert("You shared the post!");
+        }
+    </script>
+</body>
+</html>
